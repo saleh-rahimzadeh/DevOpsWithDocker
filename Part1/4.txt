@@ -1,0 +1,15 @@
+$ docker run devopsdockeruh/exec_bash_exercise
+
+$ docker ps
+>>>
+CONTAINER ID        IMAGE                               COMMAND             CREATED             STATUS              PORTS               NAMES
+b67a05e72cae        devopsdockeruh/exec_bash_exercise   "node index"        20 seconds ago      Up 17 seconds                           zealous_saha
+<<<
+
+$ docker exec -it b67a05e72cae /bin/bash
+
+# tail -f ./logs.txt
+>>>
+Secret message is:
+"Docker is easy"
+<<<
