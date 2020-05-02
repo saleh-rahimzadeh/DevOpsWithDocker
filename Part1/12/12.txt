@@ -1,0 +1,4 @@
+$ docker build -t frontend-example-docker .
+$ docker build -t backend-example-docker .
+$ docker run -p 5000:5000 frontend-example-docker
+$ docker run -v $(pwd)/logs.txt:/myapp/logs.txt -p 8000:8000 backend-example-docker
