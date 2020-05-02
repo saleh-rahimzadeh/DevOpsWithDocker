@@ -1,0 +1,2 @@
+$ docker build --network host -t curler .
+$ docker run -it --network host curler
