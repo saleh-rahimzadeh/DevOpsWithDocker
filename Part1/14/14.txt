@@ -1,0 +1,2 @@
+$ docker build -t rails-example-project .
+$ docker run -p 3000:3000 rails-example-project
