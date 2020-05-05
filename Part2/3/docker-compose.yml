@@ -1,0 +1,21 @@
+version: '3.8'  
+
+services: 
+
+    backend: 
+      image: backend-example-docker
+      ports: 
+        - 8000:8000
+      volumes: 
+        - /tmp/logs.txt:/myapp/logs.txt
+      environment:
+        - FRONT_URL=http://localhost:5000
+      network_mode: host
+
+    frontend:
+      image: frontend-example-docker
+      ports: 
+        - 5000:5000
+      environment:
+        - API_URL=http://localhost:8000
+      network_mode: host
